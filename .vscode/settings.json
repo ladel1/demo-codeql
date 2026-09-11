@@ -1,0 +1,46 @@
+{
+  // ─── Popup de complétion (IntelliSense) ───────────────────────────
+  // Ne s'ouvre plus jamais tout seul, quel que soit le langage.
+  "editor.quickSuggestions": {
+    "other": "off",
+    "comments": "off",
+    "strings": "off"
+  },
+  // Empêche l'ouverture après un "." ou un "(".
+  "editor.suggestOnTriggerCharacters": false,
+  // Entrée = nouvelle ligne, jamais "valider la suggestion".
+  "editor.acceptSuggestionOnEnter": "off",
+  // Tab = tabulation, jamais complétion.
+  "editor.tabCompletion": "off",
+  // Plus de propositions tirées des mots déjà présents dans le fichier.
+  "editor.wordBasedSuggestions": "off",
+  // Plus de snippets ("for", "cw"... qui se déplient tout seuls).
+  "editor.snippetSuggestions": "none",
+  // N'insère pas la suggestion en gris dans le texte pendant la frappe.
+  "editor.suggest.preview": false,
+  "editor.suggest.showStatusBar": false,
+
+  // ─── Suggestions inline / IA (Copilot & co) ───────────────────────
+  // C'est LE réglage pour le texte gris fantôme en fin de ligne.
+  "editor.inlineSuggest.enabled": false,
+  "github.copilot.enable": {
+    "*": false
+  },
+
+  // ─── Bulles et annotations flottantes ─────────────────────────────
+  // Bulle des paramètres pendant l'écriture d'un appel de méthode.
+  "editor.parameterHints.enabled": false,
+  // Types et noms de paramètres affichés en filigrane dans le code.
+  "editor.inlayHints.enabled": "off",
+  "dotnet.inlayHints.enableInlayHintsForParameters": false,
+  "dotnet.inlayHints.enableInlayHintsForTypes": false,
+
+  // ─── Frappe ───────────────────────────────────────────────────────
+  // Ne reformate pas la ligne pendant que tu tapes.
+  "editor.formatOnType": false,
+  "editor.formatOnPaste": false,
+
+  // ─── Complétion C# côté serveur de langage ────────────────────────
+  "dotnet.completion.showCompletionItemsFromUnimportedNamespaces": false,
+  "omnisharp.disableMSBuildDiagnosticWarning": true
+}
