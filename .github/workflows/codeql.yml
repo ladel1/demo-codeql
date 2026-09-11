@@ -26,6 +26,7 @@ jobs:
         uses: github/codeql-action/init@v3
         with:
           languages: csharp
+          queries: security-extended
 
       - name: Compiler le projet
         uses: github/codeql-action/autobuild@v3
