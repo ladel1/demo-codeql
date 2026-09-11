@@ -1,0 +1,34 @@
+name: "CodeQL Analysis For Testing" 
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron: '30 1 * * 1' 
+
+permissions:
+  security-events: write
+  contents: read
+  actions: read
+
+jobs:
+  analyze:
+    name: Analyse CodeQL
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Recuperer le code
+        uses: actions/checkout@v4
+
+      - name: Initialiser CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: csharp
+
+      - name: Compiler le projet
+        uses: github/codeql-action/autobuild@v3
+
+      - name: Lancer l'analyse
+        uses: github/codeql-action/analyze@v3
